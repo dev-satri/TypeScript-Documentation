@@ -1,5 +1,113 @@
 
 # TypeScript Documentation
+
+## Data Types and Variables in TypeScript
+### Declaring Variables in TypeScript
+In TypeScript, variables can be declared using let, const, or var. However, let and const are recommended over var.
+
+let: Allows variable reassignment but not redeclaration within the same scope.
+
+const: Declares a read-only variable (cannot be reassigned).
+
+var: Function-scoped variable (not recommended due to scoping issues).
+`Example`
+```
+let name: string = "John";
+const age: number = 30;
+var city: string = "New York";
+```
+### Built-in Data Types
+TypeScript provides several built-in data types:
+
+1. Number
+
+Represents numeric values (both integers and floating-point numbers).
+```
+let num: number = 42;
+let pi: number = 3.14;
+```
+2. String
+
+Represents textual data, enclosed within single ('), double ("), or backticks (` for template literals).
+```
+let greeting: string = "Hello, TypeScript!";
+let message: string = `Welcome, ${greeting}`;
+```
+3. Boolean
+
+Represents true or false values.
+```
+let isActive: boolean = true;
+```
+4. Array
+
+Represents a collection of values of the same type.
+```
+let numbers: number[] = [1, 2, 3, 4, 5];
+let names: Array<string> = ["Alice", "Bob", "Charlie"];
+```
+5. Tuple
+
+Represents an array with fixed types at specific positions.
+```
+let person: [string, number] = ["Alice", 25];
+```
+6. Enum
+
+Defines a set of named constants.
+```
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+let myColor: Color = Color.Green;
+```
+7. Any
+
+Represents a type that can hold any value (not recommended for type safety).
+```
+let randomValue: any = 10;
+randomValue = "Hello";
+randomValue = true;
+```
+8. Void
+
+Used for functions that do not return any value.
+```
+function logMessage(): void {
+  console.log("This function returns nothing");
+}
+```
+9. Null and Undefined
+
+Represents absence of value.
+```
+let empty: null = null;
+let notAssigned: undefined = undefined;
+```
+10. Never
+
+Represents values that never occur, typically used for functions that throw an error.
+```
+function throwError(message: string): never {
+  throw new Error(message);
+}
+```
+## Type Inference
+TypeScript can infer types based on the assigned value, reducing the need for explicit type annotations.
+```
+let inferredString = "Hello"; // TypeScript infers type as string
+let inferredNumber = 42;      // TypeScript infers type as number
+```
+## Type Assertions
+Used when you know more about a value's type than TypeScript does.
+```
+let someValue: any = "Hello TypeScript";
+let strLength: number = (someValue as string).length;
+```
+
+
 ## Functions in TypeScript
 In TypeScript, functions are defined using the function keyword, followed by the function name, and then the parameter list in parentheses. The function body is enclosed in curly braces, and the return type, if any, is specified after the parameter list using a colon.
 `Example 1`
