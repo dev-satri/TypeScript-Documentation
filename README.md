@@ -117,4 +117,4 @@ Null and Undefined: represent the absence of a value. They are typically used to
 let notDefined: undefined = undefined;
 let noValue: null = null;
 ```
-### [:fast_forward: Next: TypeScript Documentation](https://github.com/dev-satri/TypeScript-Documentation/edit/main/TypeScript-Documentation.md)
+### [:fast_forward: Next: TypeScript Documentation](https://github.com/dev-satri/TypeScript-Documentation/blob/main/TypeScript-Documentation.md)
