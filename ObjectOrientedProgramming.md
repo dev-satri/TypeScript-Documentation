@@ -5,7 +5,7 @@ Object-Oriented Programming (OOP) is a programming paradigm that organizes code 
 # Key OOP Concepts in TypeScript
 ## 1. Classes and Objects
 Classes serve as blueprints for creating objects. Objects are instances of classes.
-```
+```typescript
 class Person {
     name: string;
     age: number;
@@ -33,7 +33,7 @@ Encapsulation is the concept of restricting direct access to some components of 
 | **private** | Accessible only within the same class | ✅ Use to restrict access and enforce encapsulation | `private balance: number;` |
 | **protected** | Accessible within the same class and its subclasses | ✅ Use when child classes need access but not external classes | `protected calculateTax(): void {}` |
 | **readonly** | Can be accessed anywhere but cannot be modified after initialization | ✅ Use for defining constants or immutable properties | `readonly id: number;` |
-```
+```typescript
 class BankAccount {
     private balance: number;
     
@@ -65,7 +65,7 @@ account.withdraw(2000);
 ```
 ## 3. Inheritance
 Inheritance allows a class to inherit properties and methods from another class, promoting code reusability.
-```
+```typescript
 class Person {
     name: string;
     age: number;
@@ -83,7 +83,7 @@ class Person {
 const person1 = new Person("John Doe", 25);
 person1.greet();
 ```
-```
+```typescript
 class Employee extends Person {
     salary: number;
     
@@ -103,7 +103,7 @@ employee1.showSalary();
 ```
 ## 4. Polymorphism
 Polymorphism allows methods to have different implementations depending on the object that calls them.
-```
+```typescript
 class Animal {
     makeSound(): void {
         console.log("Some generic animal sound");
@@ -127,7 +127,7 @@ animals.forEach(animal => animal.makeSound());
 ```
 ## 5. Abstraction
 Abstraction allows defining abstract classes that serve as templates for other classes, enforcing method implementation in derived classes.
-```
+```typescript
 abstract class Vehicle {
     abstract move(): void;
 }
@@ -151,7 +151,7 @@ vehicles.forEach(vehicle => vehicle.move());
 # Interfaces in TypeScript OOP
 ## 1. Defining and Implementing an Interface
 An interface defines the shape of an object and ensures that any class implementing it adheres to the contract.
-```
+```typescript
 interface Animal {
     name: string;
     makeSound(): void;
@@ -176,7 +176,7 @@ Here, the `Dog` class implements the `Animal` interface, ensuring it has both `n
 ## 2. Interfaces with Optional and Readonly Properties
 - Optional properties are marked with `?`.
 - Readonly properties prevent modification after initialization.
-```
+```typescript
 interface Car {
     readonly brand: string;
     model: string;
@@ -202,7 +202,7 @@ console.log(add(5, 3)); // Output: 8
 ```
 ## 4. Extending Interfaces
 Interfaces can extend other interfaces to inherit properties.
-```
+```typescript
 interface Person {
     name: string;
     age: number;
@@ -233,7 +233,7 @@ Use an interface when you only need to enforce a contract, and use an abstract c
 - public: Accessible from anywhere.
 - private: Accessible only within the class.
 - protected: Accessible within the class and subclasses.
-```
+```typescript
 class Test {
     public publicVar = "I am public";
     private privateVar = "I am private";
@@ -242,7 +242,7 @@ class Test {
 ```
 ## 2. Readonly Properties
 Readonly properties can only be assigned once, either during initialization or in the constructor.
-```
+```typescript
 class User {
     readonly id: number;
     constructor(id: number) {
@@ -252,7 +252,7 @@ class User {
 ```
 ## 3. Getters and Setters
 Getters and setters allow controlled access to class properties.
-```
+```typescript
 class Rectangle {
     private _width: number;
     private _height: number;
