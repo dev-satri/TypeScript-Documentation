@@ -192,7 +192,7 @@ const myCar: Car = {
 ```
 ## 3. Interface for Function Types
 Interfaces can also define the structure of functions.
-```
+```typescript
 interface MathOperation {
     (a: number, b: number): number;
 }
