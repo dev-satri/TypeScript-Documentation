@@ -36,7 +36,7 @@ npm init -y
 ```
 ### 4. Create a TypeScript File
 Inside the `typescript-demo` folder, create a new file `index.ts`:
-```
+```typescript
 function greet(): string {
     return `Hello, World !`;
 }
@@ -61,35 +61,35 @@ Hello, World !
 ## Data Types
 In TypeScript, there are several data types that can be used to define variables, functions, and other constructs. These data types include:
 Boolean: represents a value that can be either true or false.
-```
+```typescript
 let isCompleted: boolean = false;
 ```
 
 Number: represents both integer and floating-point numbers.
-```
+```typescript
 let age: number = 30;
 let price: number = 4.99;
 ```
 
 String: represents a sequence of characters.
-```
+```typescript
 let name: string = "John";
 let message: string = `Hello, ${name}!`;
 ```
 
 Array: represents a collection of values of the same type.
-```
+```typescript
 let numbers: number[] = [1, 2, 3, 4];
 let names: string[] = ["John", "Jane", "Bob"];
 ```
 
 Tuple: represents an array with a fixed number of elements, where each element may have a different type.
-```
+```typescript
 let person: [string, number] = ["John", 30];
 ```
 
 Enum: represents a set of named constants.
-```
+```typescript
 enum Color {
   Red,
   Green,
@@ -100,13 +100,13 @@ let backgroundColor: Color = Color.Red;
 ```
 
 Any: represents any type of value.
-```
+```typescript
 let x: any = 10;
 x = "hello";
 ```
 
 Void: represents the absence of any type. It is commonly used as the return type of functions that do not return a value.
-```
+```typescript
 function logMessage(message: string): void {
   console.log(message);
 }
