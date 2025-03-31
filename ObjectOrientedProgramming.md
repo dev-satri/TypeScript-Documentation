@@ -125,7 +125,7 @@ class Cat extends Animal {
 const animals: Animal[] = [new Dog(), new Cat()];
 animals.forEach(animal => animal.makeSound());
 ```
-### 5. Abstraction
+## 5. Abstraction
 Abstraction allows defining abstract classes that serve as templates for other classes, enforcing method implementation in derived classes.
 ```
 abstract class Vehicle {
@@ -147,6 +147,86 @@ class Boat extends Vehicle {
 const vehicles: Vehicle[] = [new Car(), new Boat()];
 vehicles.forEach(vehicle => vehicle.move());
 ```
+---
+# Interfaces in TypeScript OOP
+## 1. Defining and Implementing an Interface
+An interface defines the shape of an object and ensures that any class implementing it adheres to the contract.
+```
+interface Animal {
+    name: string;
+    makeSound(): void;
+}
+
+class Dog implements Animal {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    makeSound(): void {
+        console.log("Woof!");
+    }
+}
+
+const myDog = new Dog("Buddy");
+myDog.makeSound(); // Output: Woof!
+```
+Here, the `Dog` class implements the `Animal` interface, ensuring it has both `name` and `makeSound()`.
+## 2. Interfaces with Optional and Readonly Properties
+- Optional properties are marked with `?`.
+- Readonly properties prevent modification after initialization.
+```
+interface Car {
+    readonly brand: string;
+    model: string;
+    year?: number; // Optional
+}
+
+const myCar: Car = {
+    brand: "Toyota",
+    model: "Corolla",
+};
+
+// myCar.brand = "Honda"; // Error: Cannot assign to 'brand' because it is a read-only property.
+```
+## 3. Interface for Function Types
+Interfaces can also define the structure of functions.
+```
+interface MathOperation {
+    (a: number, b: number): number;
+}
+
+const add: MathOperation = (x, y) => x + y;
+console.log(add(5, 3)); // Output: 8
+```
+## 4. Extending Interfaces
+Interfaces can extend other interfaces to inherit properties.
+```
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface Employee extends Person {
+    jobTitle: string;
+}
+
+const employee: Employee = {
+    name: "Alice",
+    age: 30,
+    jobTitle: "Software Engineer",
+};
+```
+## 5. Interface vs Abstract Class
+| Feature          | Interface                | Abstract Class           |
+|------------------|--------------------------|--------------------------|
+| Implementation   | No                       | Can have implementations |
+| Inheritance      | Supports multiple        | Supports single inheritance |
+| Properties       | Only declarations        | Can have implemented properties |
+| Constructor      | No                       | Yes                      |
+Use an interface when you only need to enforce a contract, and use an abstract class when you need partial implementations.
+---
 # TypeScript-Specific OOP Features
 ## 1. Access Modifiers
 
