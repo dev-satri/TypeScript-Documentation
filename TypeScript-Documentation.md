@@ -5,28 +5,28 @@
 In TypeScript, functions are defined using the function keyword, followed by the function name, and then the parameter list in parentheses. The function body is enclosed in curly braces, and the return type, if any, is specified after the parameter list using a colon.
 `Example 1`
 Function with no parameters and no return type:
-```
+```typescript
 function sayHello(): void {
   console.log("Hello!");
 }
 ```
 `Example 2`
 Function with one parameter and a return type:
-```
+```typescript
 function double(number: number): number {
   return number * 2;
 }
 ```
 `Example 3`
 Function with multiple parameters and a return type:
-```
+```typescript
 function addNumbers(a: number, b: number): number {
   return a + b;
 }
 ```
 `Example 4`
 Function with optional parameters and a return type:
-```
+```typescript
 function buildName(firstName: string, lastName?: string): string {
   if (lastName) {
     return firstName + " " + lastName;
@@ -38,7 +38,7 @@ function buildName(firstName: string, lastName?: string): string {
 The question mark after the lastName parameter indicates that it is optional.
 `Example 5`
 Function with default parameter values and a return type:
-```
+```typescript
 function calculatePrice(price: number, taxRate: number = 0.1): number {
   return price + (price * taxRate);
 }
@@ -53,13 +53,13 @@ const multiply = (a: number, b: number) => a * b;
 In TypeScript, conditional statements are used to execute different blocks of code based on a condition. The two main types of conditional statements are the if statement and the switch statement.
 `If Statement`
 The if statement is used to execute a block of code if a condition is true. The basic syntax is as follows:
-```
+```typescript
 if (condition) {
   // code to execute if the condition is true
 }
 ```
 Here's an example:
-```
+```typescript
 let x: number = 10;
 
 if (x > 5) {
@@ -68,7 +68,7 @@ if (x > 5) {
 ```
 `If-else Statement`
 The if-else statement is used to execute one block of code if a condition is true and another block of code if the condition is false. The basic syntax is as follows:
-```
+```typescript
 if (condition) {
   // code to execute if the condition is true
 } else {
@@ -76,7 +76,7 @@ if (condition) {
 }
 ```
 Here's an example:
-```
+```typescript
 let x: number = 10;
 
 if (x > 5) {
@@ -87,7 +87,7 @@ if (x > 5) {
 ```
 `If-else if Statement`
 The if-else if statement is used to execute different blocks of code based on multiple conditions. The basic syntax is as follows:
-```
+```typescript
 if (condition1) {
   // code to execute if condition1 is true
 } else if (condition2) {
@@ -97,7 +97,7 @@ if (condition1) {
 }
 ```
 Here's an example:
-```
+```typescript
 let x: number = 10;
 
 if (x > 20) {
@@ -110,7 +110,7 @@ if (x > 20) {
 ```
 `Switch Statement`
 The switch statement is used to execute different blocks of code based on the value of an expression. The basic syntax is as follows:
-```
+```typescript
 switch (expression) {
   case value1:
     // code to execute if expression is equal to value1
@@ -124,7 +124,7 @@ switch (expression) {
 }
 ```
 Here's an example:
-```
+```typescript
 let dayOfWeek: number = 3;
 let dayName: string;
 
@@ -162,29 +162,26 @@ These are the main types of conditional statements in TypeScript. They are used 
 In TypeScript, loops are used to execute a block of code repeatedly. There are two main types of loops: for loops and while loops.
 `For Loops`
 The for loop is used to execute a block of code for a specified number of times. The basic syntax is as follows:
-```
+```typescript
 for (initialization; condition; increment/decrement) {
   // code to execute
 }
 ```
 Here's an example:
- ```
+```typescript
  for (let i: number = 0; i < 5; i++) {
   console.log(i);
 }
  ```
  `While Loops`
 The while loop is used to execute a block of code while a specified condition is true. The basic syntax is as follows:
-
-
-```
+```typescript
 while (condition) {
   // code to execute
 }
 ```
 Here's an example:
-
-```
+```typescript
 let i: number = 0;
 
 while (i < 5) {
@@ -195,14 +192,14 @@ while (i < 5) {
 `Do-While Loops`
 The do-while loop is similar to the while loop, but it executes the block of code at least once, regardless of whether the condition is true or false. The basic syntax is as follows:
 
-```
+```typescript
 do {
   // code to execute
 } while (condition);
 ```
 Here's an example:
 
-```
+```typescript
 let i: number = 0;
 
 do {
@@ -213,13 +210,13 @@ do {
 `For-in Loops`
 The for-in loop is used to loop through the properties of an object. The basic syntax is as follows:
 
-```
+```typescript
 for (let property in object) {
   // code to execute
 }
 ```
 Here's an example:
-```
+```typescript
 let person = { name: "John", age: 30, city: "New York" };
 
 for (let property in person) {
