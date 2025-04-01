@@ -1,7 +1,94 @@
 
 # TypeScript Documentation
 
+## Data Types
+
+<details>
+  <summary>Click to expand</summary>
+
+
+<br>
+
+
+In TypeScript, there are several data types that can be used to define variables, functions, and other constructs. These data types include:
+Boolean: represents a value that can be either true or false.
+```typescript
+let isCompleted: boolean = false;
+```
+
+Number: represents both integer and floating-point numbers.
+```typescript
+let age: number = 30;
+let price: number = 4.99;
+```
+
+String: represents a sequence of characters.
+```typescript
+let name: string = "John";
+let message: string = `Hello, ${name}!`;
+```
+
+Array: represents a collection of values of the same type.
+```typescript
+let numbers: number[] = [1, 2, 3, 4];
+let names: string[] = ["John", "Jane", "Bob"];
+```
+
+Tuple: represents an array with a fixed number of elements, where each element may have a different type.
+```typescript
+let person: [string, number] = ["John", 30];
+```
+
+Enum: represents a set of named constants.
+```typescript
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+
+let backgroundColor: Color = Color.Red;
+```
+
+Any: represents any type of value.
+```typescript
+let x: any = 10;
+x = "hello";
+```
+
+Void: represents the absence of any type. It is commonly used as the return type of functions that do not return a value.
+```typescript
+function logMessage(message: string): void {
+  console.log(message);
+}
+```
+
+Null and Undefined: represent the absence of a value. They are typically used to indicate that a variable does not have a value.
+```
+let notDefined: undefined = undefined;
+let noValue: null = null;
+```
+</details>
+
+
+
+
+
+
+
+
+
+
+
 ## Functions in TypeScript
+
+<details>
+
+<summary>Click to expand</summary>
+
+
+<br>
+
 In TypeScript, functions are defined using the function keyword, followed by the function name, and then the parameter list in parentheses. The function body is enclosed in curly braces, and the return type, if any, is specified after the parameter list using a colon.
 `Example 1`
 Function with no parameters and no return type:
@@ -49,7 +136,19 @@ Arrow function with implicit return type:
 ```
 const multiply = (a: number, b: number) => a * b;
 ```
+</details>
+
+
+
 ## Conditional Statements in TypeScript
+
+<details>
+
+<summary>Click to expand</summary>
+
+<br>
+
+
 In TypeScript, conditional statements are used to execute different blocks of code based on a condition. The two main types of conditional statements are the if statement and the switch statement.
 `If Statement`
 The if statement is used to execute a block of code if a condition is true. The basic syntax is as follows:
@@ -158,7 +257,23 @@ switch (dayOfWeek) {
 console.log(dayName);
 ```
 These are the main types of conditional statements in TypeScript. They are used to make the code more flexible and adaptable to different scenarios.
+
+  
+</details>
+
+
+
+
+
+
 ## Loops in TypeScript
+
+<details>
+
+<summary>Click to expand</summary>
+
+<br>
+
 In TypeScript, loops are used to execute a block of code repeatedly. There are two main types of loops: for loops and while loops.
 `For Loops`
 The for loop is used to execute a block of code for a specified number of times. The basic syntax is as follows:
@@ -223,5 +338,9 @@ for (let property in person) {
   console.log(property + ": " + person[property]);
 }
 ```
+</details>
+
+
+
 ### [:fast_forward: Next: OOP using TypeScript](https://github.com/dev-satri/TypeScript-Documentation/blob/main/ObjectOrientedProgramming.md)
 
